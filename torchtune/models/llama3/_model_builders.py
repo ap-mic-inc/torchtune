@@ -65,10 +65,10 @@ def llama3_70b() -> TransformerDecoder:
     )
 def yi_34b() -> TransformerDecoder:
     """
-    Builder for creating a Llama3 model initialized w/ the default 70B parameter values.
+    Builder for creating a yi model initialized w/ the default 34B parameter values.
 
     Returns:
-        TransformerDecoder: Instantiation of Llama3 70 model
+        TransformerDecoder: Instantiation of yi 34 model
     """
     return llama3(
         vocab_size=64_000,
