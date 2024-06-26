@@ -100,6 +100,12 @@ This is because not all special token embeddings are initialized in the base 8B 
 
 In our initial experiments for Llama3-8B, QLoRA has a peak allocated memory of ``~9GB`` while LoRA on a single GPU has a peak allocated memory of ``~19GB``. To get started, you can use our default configs to kick off training.
 
+### 命令邏輯
+```bash
+tune run [run type] --config [parameter]
+```
+run type are .py file under recipes folder and parameter is under recipes/configs folder.
+
 ### Single GPU
 
 LoRA 8B

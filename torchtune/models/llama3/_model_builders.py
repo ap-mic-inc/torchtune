@@ -63,7 +63,25 @@ def llama3_70b() -> TransformerDecoder:
         norm_eps=1e-5,
         rope_base=500000.0,
     )
+def yi_34b() -> TransformerDecoder:
+    """
+    Builder for creating a Llama3 model initialized w/ the default 70B parameter values.
 
+    Returns:
+        TransformerDecoder: Instantiation of Llama3 70 model
+    """
+    return llama3(
+        vocab_size=64_000,
+        num_layers=60,
+        num_heads=56,
+        num_kv_heads=8,
+        embed_dim=7168,
+        max_seq_len=7168,
+        intermediate_dim=20480,
+        attn_dropout=0.0,
+        norm_eps=1e-5,
+        rope_base=500000.0,
+    )
 
 def llama3_tokenizer(path: str) -> TikTokenTokenizer:
     """
